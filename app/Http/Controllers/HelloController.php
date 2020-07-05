@@ -11,4 +11,13 @@ class HelloController extends Controller
     {
         return 'hello world';
     }
+
+    public function view()
+    {
+        $data = [
+            'msg' => 'hello world'
+        ];
+        
+        return view('hello.view', $data);
+    }
 }
