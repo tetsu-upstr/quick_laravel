@@ -6,8 +6,11 @@
   <title>Document</title>
 </head>
 <body>
-{{-- このコメントはソースに表示されない --}}
-{!! $msg !!}
-  
+@if($random < 50)
+<p>{{ $random }} is more than 50</p>
+@else
+<p>{{ $random }} is less than 50</p>
+@endif
+
 </body>
 </html>
