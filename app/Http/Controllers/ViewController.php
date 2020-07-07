@@ -21,4 +21,12 @@ class ViewController extends Controller
             'random' => random_int(0,100)
         ]);
     }
+
+    public function unless()
+    {
+        return view('view.unless', [
+            // 乱数を取得
+            'random' => random_int(0,100)
+        ]);
+    }
 }
