@@ -26,7 +26,7 @@ class ViewController extends Controller
     {
         return view('view.unless', [
             // 乱数を取得
-            'random' => random_int(0,100)
+            'random' => random_int(0, 100)
         ]);
     }
 
@@ -35,6 +35,14 @@ class ViewController extends Controller
         return view('view.isset', [
 
             'msg' => 'hello world!'
+        ]);
+    }
+
+    public function switch()
+    {
+        return view('view.switch', [
+            // 1〜5の乱数を取得
+            'random' => random_int(1, 5)
         ]);
     }
 }

@@ -6,6 +6,7 @@
   <title>Document</title>
 </head>
 <body>
+
 {{-- このコメントはソースに表示されない --}}
 {!! $msg !!}
   

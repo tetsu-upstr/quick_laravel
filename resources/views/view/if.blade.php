@@ -6,6 +6,7 @@
   <title>Document</title>
 </head>
 <body>
+
 @if($random < 50)
 <p>{{ $random }} is less than 50</p>
 @elseif($random < 70)
