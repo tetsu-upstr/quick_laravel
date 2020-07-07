@@ -52,4 +52,15 @@ class ViewController extends Controller
             'i' => 0
         ]);
     }
+
+    public function foreach_assoc()
+    {
+        return view('view.foreach_assoc', [
+            'member' => [
+                'name' => 'TANAKA, YOSHIO',
+                'sex' => 'male',
+                'birth' => '1923-11-10'
+            ]
+         ]);
+    }
 }
