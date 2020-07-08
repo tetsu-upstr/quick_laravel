@@ -63,4 +63,11 @@ class ViewController extends Controller
             ]
          ]);
     }
+
+    public function foreach_loop()
+    {
+        return view('view.foreach_loop', [
+            'weeks' => ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday']
+        ]);
+    }
 }
