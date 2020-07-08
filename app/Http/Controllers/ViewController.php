@@ -70,4 +70,11 @@ class ViewController extends Controller
             'weeks' => ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday']
         ]);
     }
+
+    public function master()
+    {
+        return view('view.master', [
+            'msg' => 'hello world',
+        ]);
+    }
 }
