@@ -77,4 +77,11 @@ class ViewController extends Controller
             'msg' => 'hello world',
         ]);
     }
+
+    public function comp()
+    {
+        return view('view.comp', [
+            'msg' => 'hello world',
+        ]);
+    }
 }
