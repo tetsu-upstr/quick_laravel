@@ -8,6 +8,7 @@
     @slot('alert_title')
       はじめてのコンポーネント
     @endslot
+
     コンポーネントは普通のビューと同じように.blade.phpファイルで定義できる
   @endcomponent
   {{ $msg }}

@@ -1,12 +1,6 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
-  <link rel="stylesheet" href="http://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/boostrap.min.css" />
-</head>
-<body>
+@extends('layouts.base')
+@section('title', 'common layouts')
+@section('main')
 
 <!-- <table class="table">
   <tr>
@@ -27,14 +21,13 @@
 
 <table class="table">
   <tr>
-    <th>No.</th>
     <th>書名</th>
     <th>価格</th>
     <th>出版社</th>
     <th>刊行日</th>
   </tr>
 <!-- インデックス番号を取り出す -->
-@foreach($records as $id => $record)
+<!-- @foreach($records as $id => $record)
   <tr>
     <td>{{ $id + 1 }}</td>
     <td>{{ $record->title }}</td>
@@ -42,8 +35,10 @@
     <td>{{ $record->publisher }}</td>
     <td>{{ $record->published }}</td>
   </tr>
-@endforeach
-</table>
+@endforeach -->
 
-</body>
-</html>
+<!-- サブビューで表示した場合 -->
+@each('subviews.book', $records, 'record', 'subviews.empty')
+</table> 
+
+@endsection
