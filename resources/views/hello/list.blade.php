@@ -37,7 +37,7 @@
   </tr>
 @endforeach -->
 
-<!-- サブビューで表示した場合 -->
+<!-- コレクションビューで表示した場合 -->
 @each('subviews.book', $records, 'record', 'subviews.empty')
 </table> 
 

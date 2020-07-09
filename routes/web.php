@@ -17,6 +17,7 @@ Route::get('/', function () {
     return view('welcome');
 });
 
+// HTTP GET経由でのリクエストを処理する
 Route::get('hello/view', 'HelloController@view');
 Route::get('hello/list', 'HelloController@list');
 Route::get('view/escape', 'ViewController@escape');
@@ -30,3 +31,5 @@ Route::get('view/foreach_assoc', 'ViewController@foreach_assoc');
 Route::get('view/foreach_loop', 'ViewController@foreach_loop');
 Route::get('view/master', 'ViewController@master');
 Route::get('view/comp', 'ViewController@comp');
+Route::get('route/param{id}', 'RouteController@param'); // 自由に値を埋め込める
+// Route::get('blog/{year}/{month}/{day}','...'); // 複数のパラメーター設定も可能
