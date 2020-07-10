@@ -32,4 +32,11 @@ Route::get('view/foreach_loop', 'ViewController@foreach_loop');
 Route::get('view/master', 'ViewController@master');
 Route::get('view/comp', 'ViewController@comp');
 Route::get('route/param{id}', 'RouteController@param'); // 自由に値を埋め込める
+// Route::get('route/param{id?}', 'RouteController@param'); // ?をつけるとURLがparamのみでもマッチ
+// 受け取るパラメーターを?で任意とする場合、引数側で public function param(int $id = 1)と既定値を明示しておく
 // Route::get('blog/{year}/{month}/{day}','...'); // 複数のパラメーター設定も可能
+
+Route::get('view/ctrl', 'CtrlController@outJson');
+
+// フォールバックルート :存在しないページ（ルート）が指定された場合に独自エラーページを表示する例 全てのルートの末尾に設定
+Route::fallback(function(){ return view('route.error');});
