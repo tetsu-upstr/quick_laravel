@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Middleware\LogMiddleware;
 
 /*
 |--------------------------------------------------------------------------
@@ -37,6 +38,8 @@ Route::get('route/param{id}', 'RouteController@param'); // 自由に値を埋め
 // Route::get('blog/{year}/{month}/{day}','...'); // 複数のパラメーター設定も可能
 
 Route::get('view/ctrl', 'CtrlController@outJson');
+
+Route::get('ctrl/middle', 'CtrlController@middle')->middleware(LogMiddleware::class); // ミドルウェアが複数の場合はカンマ区切りで追加する
 
 // フォールバックルート :存在しないページ（ルート）が指定された場合に独自エラーページを表示する例 全てのルートの末尾に設定
 Route::fallback(function(){ return view('route.error');});
